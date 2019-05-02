@@ -18,8 +18,10 @@ export default {
     data() {
         return {
             allowed_pins: [
+                'P2',
                 'P3',
                 'P9',
+                'P10',
                 'P11',
                 'P21',
                 'P22'
