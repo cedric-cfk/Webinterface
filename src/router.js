@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home'
 
+import GeneralConfig from './views/GeneralConfig'
+
 import SensorsDS1820 from './views/SensorsDS1820'
 import SensorsHX711 from './views/SensorsHX711'
 import SensorsHX711Calibration from './views/SensorsHX711Calibration'
@@ -25,6 +27,11 @@ export default new Router({
         name: 'home',
         component: Home
     },
+    {
+        path: '/config/general',
+        name: 'general',
+        component: GeneralConfig
+    },    
     {
         path: '/sensors/ds1820',
         name: 'ds1820',

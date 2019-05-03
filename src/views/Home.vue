@@ -2,6 +2,11 @@
     <div class="home">
         <h1>Welcome!</h1>
 
+        <h3>
+            <router-link to="/config/general">
+                General settings
+            </router-link>
+        </h3>
 
         <h3>Networking</h3>
         <ul>
