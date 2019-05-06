@@ -10,7 +10,7 @@
                     name="enabled"
                     v-model="wlan_config.enabled">
             </p>
-            <p>
+            <p v-if="ssid_visible">
                 <label for="ssid">SSID:</label>
                 <select name="ssid"
                         v-model="wlan_config.ssid"
@@ -25,6 +25,14 @@
                         {{ ap.ssid }}
                     </option>
                 </select>
+                <br>
+                <button @click="ssid_visible = false">My SSID is not listed</button>
+            </p>
+            <p v-else>
+                <label for="ssid">SSID:</label>
+                <input type="text"
+                       name="ssid" 
+                       v-model="wlan_config.ssid">
             </p>
             <p>
                 <label for="encryption">Encryption:</label>
@@ -95,6 +103,7 @@ export default {
     name: 'NetworkingWLan',
     data() {
         return {
+            ssid_visible: true,
             wlan_config: {
                 available: [],
                 ssid: '',
