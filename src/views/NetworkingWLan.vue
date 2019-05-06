@@ -25,7 +25,10 @@
                         {{ ap.ssid }}
                     </option>
                 </select>
-                <br>
+            </p>
+            <p v-if="ssid_visible" id="ssid_not_listed">
+                <label for="ssid_visible">
+                </label>
                 <button @click="ssid_visible = false">My SSID is not listed</button>
             </p>
             <p v-else>
@@ -133,3 +136,9 @@ export default {
 }
 
 </script>
+
+<style>
+#ssid_not_listed {
+    margin-top: 0em !important;
+}
+</style>
