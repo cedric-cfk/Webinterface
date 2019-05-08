@@ -36,13 +36,6 @@ export default {
 
 <style>
 
-.ds1820-positions {
-    padding: 3vh 0;
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
-}
-
 button.unassigned {
     background-color:#ffaaaa;
     border:1px solid #aa3939;

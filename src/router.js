@@ -14,7 +14,8 @@ import TelemetryBEEP from './views/TelemetryBEEP'
 import NetworkingWLan from './views/NetworkingWLan'
 import NetworkingAccessPoint from './views/NetworkingAccessPoint'
 
-import Restart from './views/Restart.vue'
+import Restart from './views/Restart'
+import SystemLog from './views/SystemLog'
 
 Vue.use(Router)
 
@@ -71,6 +72,11 @@ export default new Router({
         path: '/restart',
         name: 'restart',
         component: Restart
+    },
+    {
+        path: '/log',
+        name: 'log',
+        component: SystemLog
     }
   ]
 })

@@ -25,17 +25,17 @@
         <ul>
             <li>
                 <router-link to="/sensors/ds1820">
-                    DS1820
+                    Temperature (DS1820)
                 </router-link>
             </li>
             <li>
                 <router-link to="/sensors/hx711">
-                    HX711
+                    Scale (HX711)
                 </router-link>
             </li>
             <li>
                 <router-link to="/sensors/bme280">
-                    BME280
+                    Humidity (BME280)
                 </router-link>
             </li>
         </ul>
@@ -54,6 +54,11 @@
             <li>
                 <router-link to="/restart">
                     Restart
+                </router-link>
+            </li>
+            <li>
+                <router-link to="/log">
+                    Log
                 </router-link>
             </li>
         </ul>

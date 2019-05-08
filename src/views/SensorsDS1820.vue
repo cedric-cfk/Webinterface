@@ -148,13 +148,25 @@ export default {
     text-align: left;
 }
 
+.ds1820-positions {
+    padding: 2vh 0;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+}
+
 @media (max-width: 500px) {
     .round {
-        width: 14vw;
-        height: 14vw;
-        border-radius: 7vw;
-        min-width: 3em;
-        min-height: 3em;
+        width: 12vw;
+        height: 12vw;
+        border-radius: 6vw;
+        min-width: 2em;
+        min-height: 2em;
     }
 }
 
@@ -167,7 +179,6 @@ export default {
 }
 
 .ds1820 button {
-	display:inline-block;
 	cursor:pointer;
 	color:#000;
 	padding:2px 2px;
