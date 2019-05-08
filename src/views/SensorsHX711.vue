@@ -18,7 +18,7 @@
                              v-model="hx711_config.pin_pdsck" />
         </p>
         <p>
-            <b v-if="is_calibrated">Your scale is not calibrated!</b>
+            <b v-if="!is_calibrated">Your scale is not calibrated!</b>
             <button @click="$router.push('/sensors/hx711/calibrate')">
                 Start calibration
             </button>
