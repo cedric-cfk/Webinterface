@@ -1,5 +1,5 @@
 <template>
-    <fieldset class="ds1820-unassigned">
+    <fieldset class="ds1820-positions">
         <legend>Unassigned sensors:</legend>
         <div v-for="sensor in unassigned_ds1820" :key="sensor">
             <button class="round"
@@ -65,21 +65,13 @@ export default {
 
 <style>
 
-.ds1820-unassigned {
-    padding: 2vh 0;
-    display: flex;
-    justify-content: space-around;
-}
-
-.ds1820-unassigned button {
+button.unselected {
     border: 1px solid #444444;
-}
-
-.unselected {
     background-color: #EEEEEE;
 }
 
-.selected {
+button.selected {
+    border: 1px solid #444444;
     background-color: #CCCCCC;
 }
 
