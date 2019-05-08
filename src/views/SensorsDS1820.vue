@@ -150,14 +150,10 @@ export default {
 
 .ds1820-positions {
     padding: 2vh 0;
-    display: -moz-box;
-    display: -webkit-box;
-    display: box;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
 }
 
 @media (max-width: 500px) {
@@ -165,8 +161,8 @@ export default {
         width: 12vw;
         height: 12vw;
         border-radius: 6vw;
-        min-width: 2em;
-        min-height: 2em;
+        min-width: 1em;
+        min-height: 1em;
     }
 }
 
