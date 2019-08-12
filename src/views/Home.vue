@@ -24,6 +24,11 @@
         <h3>Sensors</h3>
         <ul>
             <li>
+                <router-link to="/sensors/test">
+                    Test Sensors
+                </router-link>
+            </li>
+            <li>
                 <router-link to="/sensors/ds1820">
                     Temperature (DS1820)
                 </router-link>

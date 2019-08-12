@@ -8,6 +8,8 @@ import SensorsDS1820 from './views/SensorsDS1820'
 import SensorsHX711 from './views/SensorsHX711'
 import SensorsHX711Calibration from './views/SensorsHX711Calibration'
 import SensorsBME280 from './views/SensorsBME280'
+import SensorsTest from './views/SensorsTest'
+
 
 import TelemetryBEEP from './views/TelemetryBEEP'
 
@@ -37,6 +39,11 @@ export default new Router({
         path: '/sensors/ds1820',
         name: 'ds1820',
         component: SensorsDS1820
+    },
+    {
+        path: '/sensors/test',
+        name: 'sensortest',
+        component: SensorsTest
     },
     {
         path: '/sensors/hx711/calibrate',
