@@ -10,6 +10,17 @@
                     name="enabled"
                     v-model="wlan_config.enabled">
             </p>
+            <p>
+                <label for="antenna_external">Use external antenna:</label>
+                <input type="checkbox"
+                    name="antenna_external"
+                    v-model="wlan_config.antenna_external">
+            </p>
+            <p>
+                <label for="pin_dout">Antenna Pin:</label>
+                <ConfigPinSelect name="pin_dout"
+                                 v-model="wlan_config.antenna_pin" />
+            </p>
             <p v-if="ssid_visible">
                 <label for="ssid">SSID:</label>
                 <select name="ssid"
@@ -34,7 +45,7 @@
             <p v-else>
                 <label for="ssid">SSID:</label>
                 <input type="text"
-                       name="ssid" 
+                       name="ssid"
                        v-model="wlan_config.ssid">
             </p>
             <p>
@@ -51,7 +62,7 @@
             <p>
                 <label for="password">Password:</label>
                 <input type="password"
-                       name="password" 
+                       name="password"
                        v-model="wlan_config.password">
             </p>
             <p>
@@ -71,19 +82,19 @@
                 v-if="wlan_config.ifconfig === 'static'">
                 <p>
                     <label for="ipaddress">Address:</label>
-                    <input type="text" 
+                    <input type="text"
                            name="ipaddress"
                            v-model="wlan_config.ipaddress">
                 </p>
                 <p>
                     <label for="subnet">Subnet:</label>
-                    <input type="text" 
+                    <input type="text"
                            name="subnet"
                            v-model="wlan_config.subnet">
                 </p>
                 <p>
                     <label for="gateway">Gateway:</label>
-                    <input type="text" 
+                    <input type="text"
                            name="gateway"
                            v-model="wlan_config.gateway">
                 </p>
@@ -101,6 +112,7 @@
 <script>
 
 import ConfigForm from '@/components/ConfigForm'
+import ConfigPinSelect from '@/components/ConfigPinSelect'
 
 export default {
     name: 'NetworkingWLan',
@@ -108,6 +120,7 @@ export default {
         return {
             ssid_visible: true,
             wlan_config: {
+                antenna_pin: '',
                 available: [],
                 ssid: '',
                 encryption: '',
@@ -131,7 +144,8 @@ export default {
         }
     },
     components: {
-        ConfigForm
+        ConfigForm,
+        ConfigPinSelect
     }
 }
 

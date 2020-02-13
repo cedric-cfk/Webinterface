@@ -8,7 +8,7 @@
         </option>
     </select>
 </template>
-    
+
 <script>
 export default {
     name: 'ConfigPinSelect',
@@ -23,6 +23,7 @@ export default {
                 'P9',
                 'P10',
                 'P11',
+                'P12',
                 'P21',
                 'P22'
             ]
