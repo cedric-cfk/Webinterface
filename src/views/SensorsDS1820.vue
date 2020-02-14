@@ -66,6 +66,7 @@ export default {
                 pin: 'P1',
                 positions: {}
             },
+            polling: null,
         }
     },
 
@@ -122,14 +123,20 @@ export default {
                 }
             }
         },
+
+        pollData() {
+            this.polling = setInterval(() => {
+                this.load_temperatures();
+                 }, 500)
+        },
     },
 
     created() {
         this.load_temperatures();
-
-        setInterval( () => {
-            this.load_temperatures();
-        }, 2000); 
+        this.pollData();
+    },
+    beforeDestroy() {
+	       clearInterval(this.polling)
     },
 
     components: {

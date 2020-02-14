@@ -10,13 +10,13 @@
 Humidity-Related Measurements
         <ul id="humidities">
   <li v-for="item, key, index in humidities">
-     {{ index+1 }} - {{ item }} - {{ key }} 
+     {{ index+1 }} - {{ item }} - {{ key }}
   </li>
 </ul>
 Weight
         <ul id="Weight">
   <li v-for="item in weight">
-      {{ item }} 
+      {{ item }}
   </li>
 </ul>
 </div>
@@ -44,6 +44,7 @@ export default {
                 pin: 'P1',
                 positions: {}
             },
+            polling: null,
         }
     },
 
@@ -126,18 +127,26 @@ export default {
                 }
             }
         },
+
+        pollData() {
+		        this.polling = setInterval(() => {
+                this.load_temperatures();
+                this.load_humidity();
+                this.load_weight();
+		             }, 500)
+	      },
+
+
     },
 
     created() {
         this.load_temperatures();
         this.load_humidity();
         this.load_weight();
-
-        setInterval( () => {
-            this.load_temperatures();
-            this.load_humidity();
-            this.load_weight();
-        }, 2000); 
+        this.pollData();
+    },
+    beforeDestroy() {
+	       clearInterval(this.polling)
     },
 
     components: {
