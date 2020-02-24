@@ -67,6 +67,7 @@ export default {
                 positions: {}
             },
             polling: null,
+            request: null,
         }
     },
 
@@ -97,10 +98,15 @@ export default {
 
     methods: {
         load_temperatures() {
+            if(this.request != null){
+                console.log("deleted old request")
+                this.request.cancel("Canceled Request");
+            }
+            this.request = axios.CancelToken.source();
             axios.get([
                 process.env.VUE_APP_FIPY_URL,
                 '/api/sensors/ds1820'
-            ].join('')).then(response => {
+            ].join(''), { cancelToken: this.request.token }).then(response => {
                 Object.keys(response.data).forEach((key) => {
                     this.$set(this.temperatures, key, response.data[key]);
                 });
@@ -127,7 +133,7 @@ export default {
         pollData() {
             this.polling = setInterval(() => {
                 this.load_temperatures();
-                 }, 500)
+                 }, 5000)
         },
     },
 
@@ -136,7 +142,7 @@ export default {
         this.pollData();
     },
     beforeDestroy() {
-	       clearInterval(this.polling)
+        clearInterval(this.polling)
     },
 
     components: {

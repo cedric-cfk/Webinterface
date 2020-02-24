@@ -45,6 +45,9 @@ export default {
                 positions: {}
             },
             polling: null,
+            temp_request: null,
+            hum_request: null,
+            weight_request: null,
         }
     },
 
@@ -75,10 +78,15 @@ export default {
 
     methods: {
         load_temperatures() {
+            if(this.temp_request != null){
+                console.log("deleted old temperature request")
+                this.temp_request.cancel("Canceled Request");
+            }
+            this.temp_request = axios.CancelToken.source();
             axios.get([
                 process.env.VUE_APP_FIPY_URL,
                 '/api/sensors/ds1820'
-            ].join('')).then(response => {
+            ].join(''), { cancelToken: this.temp_request.token }).then(response => {
                 Object.keys(response.data).forEach((key) => {
                     this.$set(this.temperatures, key, response.data[key]);
                 });
@@ -88,10 +96,15 @@ export default {
         },
 
          load_humidity() {
+             if(this.hum_request != null){
+                 console.log("deleted old humidity request")
+                 this.hum_request.cancel("Canceled Request");
+             }
+             this.hum_request = axios.CancelToken.source();
             axios.get([
                 process.env.VUE_APP_FIPY_URL,
                 '/api/sensors/bme280'
-            ].join('')).then(response => {
+            ].join(''), { cancelToken: this.hum_request.token }).then(response => {
                 Object.keys(response.data).forEach((key) => {
                     this.$set(this.humidities, key, response.data[key]);
                 });
@@ -101,10 +114,15 @@ export default {
         },
 
         load_weight() {
+            if(this.weight_request != null){
+                console.log("deleted old weight request")
+                this.weight_request.cancel("Canceled Request");
+            }
+            this.weight_request = axios.CancelToken.source();
             axios.get([
                 process.env.VUE_APP_FIPY_URL,
                 '/api/sensors/hx711cal'
-            ].join('')).then(response => {
+            ].join(''), { cancelToken: this.weight_request.token }).then(response => {
                 Object.keys(response.data).forEach((key) => {
                     this.$set(this.weight, key, response.data[key]);
                 });
@@ -133,7 +151,7 @@ export default {
                 this.load_temperatures();
                 this.load_humidity();
                 this.load_weight();
-		             }, 500)
+		             }, 5000)
 	      },
 
 
