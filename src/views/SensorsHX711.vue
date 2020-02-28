@@ -18,7 +18,6 @@
                              v-model="hx711_config.pin_pdsck" />
         </p>
         <p>
-            <b v-if="!is_calibrated">Your scale is not calibrated!</b>
             <button @click="$router.push('/sensors/hx711/calibrate')">
                 Start calibration
             </button>
@@ -47,7 +46,7 @@ export default {
     computed: {
         is_calibrated() {
             return (
-                this.hx711_config.hasOwnProperty('tare_offset') 
+                this.hx711_config.hasOwnProperty('tare_offset')
                 && this.hx711_config['tare_offset'] !== 0
                 && this.hx711_config.hasOwnProperty('calibration_factor')
                 && this.hx711_config['calibration_factor'] !== 1
