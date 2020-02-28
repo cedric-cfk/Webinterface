@@ -158,6 +158,10 @@ export default {
     },
 
     created() {
+        axios.get([
+            process.env.VUE_APP_FIPY_URL,
+            '/reinit'
+        ].join(''))
         this.load_temperatures();
         this.load_humidity();
         this.load_weight();
