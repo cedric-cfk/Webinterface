@@ -1,35 +1,34 @@
 <template>
   <div class="ds1820">
-    <h1>Configure DS1820</h1>
+    <h1>{{ $t('ds1820.title') }}</h1>
     <ConfigForm v-model="ds1820_config"
                 config_url="/api/config/sensors/ds1820"
                 buttons_visible="false">
         <p>
-            <label for="enabled">Enabled:</label>
+            <label for="enabled">{{ $t('general.enabled') }}:</label>
             <input type="checkbox"
                    name="enabled"
                    v-model="ds1820_config.enabled">
         </p>
         <p>
-            <label for="pin">Select Pin</label>
+            <label for="pin">{{ $t('ds1820.pin_select') }}:</label>
             <ConfigPinSelect v-model="ds1820_config.pin" />
         </p>
         <div class="description">
-            Please assign each temperature sensor to a position.<br>
-            Below you see two sets of circles. The red/green circles represent the positions of your sensors, the grey circles below are the connected DS1820.<br>
-            Follow these steps for each sensor:
+            <br>
+            <p v-html="$t('ds1820.paragraph')"></p>
             <ol>
                 <li>
-                    Grab the metal part of a sensor. Select the grey circle with the rising temperature.
+                    {{ $t('ds1820.1_list') }}
                 </li>
                 <li>
-                    Click on the circle representing the position of the sensor you hold.
+                    {{ $t('ds1820.2_list') }}
                 </li>
                 <li>
-                    Now the circle should be colored green and show the temperature.
+                    {{ $t('ds1820.3_list') }}
                 </li>
             </ol>
-            Tip: By clicking a circle with an assigned sensor the assignment can be undone.
+            {{ $t('ds1820.tip') }}
         </div>
         <SensorsDS1820Positions :ds1820_positions="ds1820_config.positions"
                                 :temperatures="temperatures_by_position"

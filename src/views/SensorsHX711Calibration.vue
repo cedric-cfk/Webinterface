@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Scale</h1>
+        <h1>{{ $t('hx711_calibration.title') }}</h1>
         <ConfigForm v-model="hx711_config"
                     config_url="/api/config/sensors/hx711"
                     :buttons_visible=false
@@ -8,31 +8,29 @@
             <div v-if="step===0"
                  class="flex-form">
                 <p>
-                    We propose that you first put 1 kg on your scale, and then entirele remove all the weight in the next step.
-                    If you want, you can also specify some other weight. When the weight is on your scale, click on "Continue".
+                    {{ $t('hx711_calibration.1_text') }}
                 </p>
                 <p>
-                    <label for="weight">Weight (kg)</label>
-                    <input type="number" 
+                    <label for="weight">{{ $t('hx711_calibration.weight') }}</label>
+                    <input type="number"
                            name="cal_weight"
                            min="0"
                            step="0.1"
                            v-model.number="cal_weight">
                 </p>
                 <p class="submit">
-                        <button @click="load_weight(do_step_1)">Continue</button>
-                        <button @click="$router.go(-1)">Back</button>
+                        <button @click="load_weight(do_step_1)">{{ $t('hx711_calibration.continue') }}</button>
+                        <button @click="$router.go(-1)">{{ $t('hx711_calibration.back') }}</button>
                 </p>
             </div>
 
             <div v-if="step===1"
                  class="flex-form">
                 <p>
-                    We propose that you now remove all the weight from your scale.
-                    If you want, you can also specify some remaining weight. Once you removed the weight, click on "Continue".
+                    {{ $t('hx711_calibration.2_text') }}
                 </p>
                 <p>
-                    <label for="weight">Weight (kg)</label>
+                    <label for="weight">{{ $t('hx711_calibration.weight') }}</label>
                     <input type="number"
                         name="cal_no_weight"
                         min="0"
@@ -40,8 +38,8 @@
                         v-model.number="cal_no_weight">
                 </p>
                 <p class="submit">
-                    <button @click="load_weight(do_step_2)">Continue</button>
-                    <button @click="step=0">Back</button>
+                    <button @click="load_weight(do_step_2)">{{ $t('hx711_calibration.continue') }}</button>
+                    <button @click="step=0">{{ $t('hx711_calibration.back') }}</button>
                 </p>
             </div>
         </ConfigForm>
@@ -95,7 +93,7 @@ export default {
 
         do_step_2(weight) {
             if (Number.parseFloat(weight)) {
-    
+
                 let calibration_factor = (
                     (Number.parseFloat(this.measured_weight) - Number.parseFloat(weight))
                     / (Number.parseFloat(this.cal_weight) - Number.parseFloat(this.cal_no_weight))
@@ -105,11 +103,11 @@ export default {
                     'calibration_factor',
                     calibration_factor
                 );
-                
+
                 let tare_offset = (
                     Number.parseFloat(this.measured_weight)
                     - this.hx711_config.calibration_factor * Number.parseFloat(this.cal_weight)
-                ); 
+                );
                 this.$set(
                     this.hx711_config,
                     'tare_offset',
@@ -118,7 +116,7 @@ export default {
                 this.step = 0;
 
                 this.$refs.configform.save_config();
-                this.$router.push('/sensors/hx711');
+                this.$router.push("'/' + $i18n.locale + '/sensors/hx711'");
 
             }
             else {

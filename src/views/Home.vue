@@ -1,69 +1,69 @@
 <template>
     <div class="home">
-        <h1>Welcome!</h1>
+        <h1>{{ $t('home.welcome') }}!</h1>
 
         <h3>
-            <router-link to="/config/general">
-                General settings
+            <router-link :to="'/' + $i18n.locale + '/config/general'">
+                {{ $t('home.config') }}
             </router-link>
         </h3>
 
-        <h3>Networking</h3>
+        <h3>{{ $t('home.networking') }}</h3>
         <ul>
             <li>
-                <router-link to="/networking/ap">
-                    Access Point
+                <router-link :to="'/' + $i18n.locale + '/networking/ap'">
+                    {{ $t('home.ap') }}
                 </router-link>
             </li>
             <li>
-                <router-link to="/networking/wlan">
-                    WLan
+                <router-link :to="'/' + $i18n.locale + '/networking/wlan'">
+                    {{ $t('home.wlan') }}
                 </router-link>
             </li>
         </ul>
-        <h3>Sensors</h3>
+        <h3>{{ $t('home.sensors') }}</h3>
         <ul>
             <li>
-                <router-link to="/sensors/test">
-                    Test Sensors
+                <router-link :to="'/' + $i18n.locale + '/sensors/test'">
+                    {{ $t('home.test') }}
                 </router-link>
             </li>
             <li>
-                <router-link to="/sensors/ds1820">
-                    Temperature (DS1820)
+                <router-link :to="'/' + $i18n.locale + '/sensors/ds1820'">
+                    {{ $t('home.ds1820') }}
                 </router-link>
             </li>
             <li>
-                <router-link to="/sensors/hx711">
-                    Scale (HX711)
+                <router-link :to="'/' + $i18n.locale + '/sensors/hx711'">
+                    {{ $t('home.hx711') }}
                 </router-link>
             </li>
             <li>
-                <router-link to="/sensors/bme280">
-                    Humidity (BME280)
-                </router-link>
-            </li>
-        </ul>
-
-        <h3>Telemetry</h3>
-        <ul>
-            <li>
-                <router-link to="/telemetry/beep">
-                    BEEP
+                <router-link :to="'/' + $i18n.locale + '/sensors/bme280'">
+                    {{ $t('home.bm280') }}
                 </router-link>
             </li>
         </ul>
 
-        <h3>System</h3>
+        <h3>{{ $t('home.telemetry') }}</h3>
         <ul>
             <li>
-                <router-link to="/restart">
-                    Restart
+                <router-link :to="'/' + $i18n.locale + '/telemetry/beep'">
+                    {{ $t('home.beep') }}
+                </router-link>
+            </li>
+        </ul>
+
+        <h3>{{ $t('home.system') }}</h3>
+        <ul>
+            <li>
+                <router-link :to="'/' + $i18n.locale + '/restart'">
+                    {{ $t('home.restart') }}
                 </router-link>
             </li>
             <li>
-                <router-link to="/log">
-                    Log
+                <router-link :to="'/' + $i18n.locale + '/log'">
+                    {{ $t('home.log') }}
                 </router-link>
             </li>
         </ul>
