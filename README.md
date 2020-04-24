@@ -15,7 +15,7 @@ In this case you can see changes instantly and don't have to copy compiled files
   w = network.WLAN(id=0)
   w.ifconfig()[0]
   ```
-  If this is not working for you. Try to find the FiPys IP with the interface of your router. The FiPy shoud be named something like "expressive" or "espressif". Otherwise you can use https://stackoverflow.com/a/43546432 to detect which IPs are in your network. Now you can disconnected your FiPy and scan a second time. Compare those tow outputs. The missing IP should be your FiPys IP.
+  If this is not working for you. Try to find the FiPys IP with the interface of your router. The FiPy shoud be named something like "expressive" or "espressif". Otherwise you can use https://stackoverflow.com/a/43546432 to detect which IPs are in your network. Now you can disconnected your FiPy and scan a second time. Compare those two outputs. The missing IP should be your FiPys IP.
 
 * Rename the `.env.example` file in the hiverize/webinterface project to `.env` and edit it to add the URL or IP of your FiPy.
 For example:
