@@ -1,7 +1,4 @@
 {
-  "sensors_general":{
-
-  },
   "test":{
     "title": "Test sensors",
     "temperatures": "Temperatur (DS18B20)",
@@ -16,7 +13,9 @@
     "1_list": "Umfasse den metallenen Teil eines Sensors. Klicke den grauen Kreis mit der steigenden Temperatur an.",
     "2_list": "Klicke den roten Kreis an, der die Position des zurzeit umfassten Sensors repräsentiert.",
     "3_list": "Der zuletzt angeklickte Kreis sollte sich nun grün färben und die Temperatur anzeigen. Nachdem du einen Sensor zugeordnet hast, verschwindet er außerdem aus dem grauen Satz der noch nicht zugeordneten Kreise.",
-    "tip": "Tipp: Durch erneutes Anklicken eines bereits zugeordneten Sensors kann die Zuordnung rückgängig gemacht werden."
+    "tip": "Tipp: Durch erneutes Anklicken eines bereits zugeordneten Sensors kann die Zuordnung rückgängig gemacht werden.",
+    "positions": "Positionen",
+    "available": "Nicht zugeordnet Sensoren"
   },
   "hx711_config":{
     "title": "Konfiguration des HX711",

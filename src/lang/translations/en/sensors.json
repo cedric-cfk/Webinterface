@@ -1,7 +1,4 @@
 {
-  "sensors_general":{
-
-  },
   "test":{
     "title": "Test sensors",
     "temperatures": "Temperatures (DS18B20)",
@@ -15,7 +12,9 @@
     "1_list": "Grab the metal part of a sensor. Select the grey circle with the rising temperature.",
     "2_list": "Click on the circle representing the position of the sensor you hold.",
     "3_list": "Now the circle should be colored green and show the temperature.",
-    "tip": "Tip: By clicking a circle with an assigned sensor the assignment can be undone"
+    "tip": "Tip: By clicking a circle with an assigned sensor the assignment can be undone",
+    "positions": "Positions",
+    "available": "Unassigned sensors"
   },
   "hx711_config":{
     "title": "Configure HX711",

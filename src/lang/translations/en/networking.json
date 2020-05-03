@@ -1,6 +1,5 @@
 {
   "networking_general":{
-    "enabled": "Enabled",
     "ssid": "SSID",
     "encryption": "Encryption",
     "password": "Password"

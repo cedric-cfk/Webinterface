@@ -5,7 +5,7 @@
         <ConfigForm v-model="ap_config"
                     config_url="/api/config/networking/accesspoint">
             <p>
-                <label for="enabled">{{ $t('networking_general.enabled') }}:</label>
+                <label for="enabled">{{ $t('general.enabled') }}:</label>
                 <input type="checkbox"
                     name="enabled"
                     v-model="ap_config.enabled">
