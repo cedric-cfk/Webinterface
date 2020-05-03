@@ -67,8 +67,38 @@
                 </router-link>
             </li>
         </ul>
+
+        <div>
+          <label for="switch_language">{{ $t('general_config.select_language') }}:</label>
+          <br>
+          <select v-model="$i18n.locale" @change="onLangChange($event)">
+            <option
+                v-for="(lang, i) in langs"
+                :key="`Lang${i}`"
+                :value="lang">
+              {{ lang }}
+            </option>
+          </select>
+        </div>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'GeneralConfig',
+    data() {
+        return {
+            langs: ['de', 'en']
+        }
+    },
+    methods: {
+        onLangChange(event) {
+            console.log("Language changed to " + event.target.value)
+            this.$router.push("'/' + $event.target.value + '/home'")
+        }
+    }
+}
+</script>
 
 <style>
 

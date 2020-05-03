@@ -23,17 +23,6 @@
             <ConfigPinSelect name="pin_dout"
                              v-model="general_config.button_ap_pin" />
         </p>
-        <p>
-          <label for="switch_language">{{ $t('general_config.select_language') }}:</label>
-          <select v-model="$i18n.locale" @change="onLangChange($event)">
-            <option
-                v-for="(lang, i) in langs"
-                :key="`Lang${i}`"
-                :value="lang">
-              {{ lang }}
-            </option>
-          </select>
-        </p>
     </ConfigForm>
   </div>
 </template>
@@ -49,8 +38,7 @@ export default {
         return {
             general_config: {
                 initial_time: 0
-            },
-            langs: ['de', 'en']
+            }
         }
     },
     components: {
@@ -60,10 +48,6 @@ export default {
     methods: {
         get_local_time() {
             this.$set(this.general_config, "initial_time", new Date().getTime());
-        },
-        onLangChange(event) {
-            console.log("Language changed to " + event.target.value)
-            this.$router.push("'/' + $event.target.value + '/home'")
         }
     }
 }
