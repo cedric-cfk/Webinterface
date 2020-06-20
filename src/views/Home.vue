@@ -84,6 +84,8 @@
 </template>
 
 <script>
+import { i18n } from '../main.js'
+
 export default {
     name: 'GeneralConfig',
     data() {
@@ -94,7 +96,7 @@ export default {
     methods: {
         onLangChange(event) {
             console.log("Language changed to " + event.target.value)
-            this.$router.push("'/' + $event.target.value + '/home'")
+            this.$router.push('/' + i18n.locale + '/home')
         }
     }
 }

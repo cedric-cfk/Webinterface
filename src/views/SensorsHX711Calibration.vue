@@ -50,6 +50,7 @@
 
 import axios from 'axios'
 import ConfigForm from '@/components/ConfigForm'
+import { i18n } from '../main.js'
 
 export default {
     name: 'hx711',
@@ -116,7 +117,8 @@ export default {
                 this.step = 0;
 
                 this.$refs.configform.save_config();
-                this.$router.push("'/' + $i18n.locale + '/sensors/hx711'");
+                console.log("routing to sensors/hx711");
+                this.$router.push('/' + i18n.locale + '/sensors/hx711');
 
             }
             else {
