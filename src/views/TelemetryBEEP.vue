@@ -1,25 +1,29 @@
 <template>
+  <div>
+    <h1>{{ $t('beep.title') }}</h1>
+
     <ConfigForm v-model="beep_config"
                 config_url="/api/config/telemetry/beep">
         <p>
-            <label for="enabled">Enabled:</label>
+            <label for="enabled">{{ $t('general.enabled') }}:</label>
             <input type="checkbox"
                    name="enabled"
                    v-model="beep_config.enabled">
         </p>
         <p>
-            <label for="enabled">Server:</label>
+            <label for="enabled">{{ $t('beep.server') }}:</label>
             <input type="text"
                    name="server"
                    v-model="beep_config.server">
         </p>
         <p>
-            <label for="enabled">Sensor Key:</label>
+            <label for="enabled">{{ $t('beep.sensor_key') }}:</label>
             <input type="text"
                     name="sensor_key"
                     v-model="beep_config.sensor_key">
         </p>
     </ConfigForm>
+  </div>
 </template>
 
 <script>

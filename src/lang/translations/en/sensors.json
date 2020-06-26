@@ -1,0 +1,38 @@
+{
+  "test":{
+    "title": "Test sensors",
+    "temperatures": "Temperatures (DS18B20)",
+    "humidity": "Humidity-Related Measurements",
+    "weight": "Weight"
+  },
+  "ds1820":{
+    "title": "Configure DS1820",
+    "pin_select": "Select Pin",
+    "paragraph": "Please assign each temperature sensor to a position.<br>Below you see two sets of circles. The red/green circles represent the positions of your sensors, the grey circles below are the connected DS1820.<br>Follow these steps for each sensor:",
+    "1_list": "Grab the metal part of a sensor. Select the grey circle with the rising temperature.",
+    "2_list": "Click on the circle representing the position of the sensor you hold.",
+    "3_list": "Now the circle should be colored green and show the temperature.",
+    "tip": "Tip: By clicking a circle with an assigned sensor the assignment can be undone",
+    "positions": "Positions",
+    "available": "Unassigned sensors"
+  },
+  "hx711_config":{
+    "title": "Configure HX711",
+    "pin_data": "Data Pin (DOUT/DT)",
+    "pin_clock": "Clock Pin (CLK/SCK)",
+    "start_calibration": "Start calibration"
+  },
+  "hx711_calibration":{
+    "title": "Calibrating scale",
+    "1_text": "We propose that you first put 1 kg on your scale, and then entirele remove all the weight in the next step. If you want, you can also specify some other weight. When the weight is on your scale, click on \"Continue\".",
+    "weight": "Weight (kg)",
+    "continue": "Continue",
+    "back": "Back",
+    "2_text": "We propose that you now remove all the weight from your scale. If you want, you can also specify some remaining weight. Once you removed the weight, click on \"Continue\"."
+  },
+  "bme280":{
+    "title": "Configure BME280",
+    "pin_sda": "Pin SDA",
+    "pin_scl": "Pin SCL"
+  }
+}

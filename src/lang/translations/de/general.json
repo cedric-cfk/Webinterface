@@ -1,0 +1,40 @@
+{
+  "general":{
+    "home": "Start",
+    "enabled": "Aktiviert",
+    "save_config": "Speicher Einstellungen",
+    "saving": "wird Gespeichert...",
+    "saved": "Gespeichert",
+    "reset": "Zurücksetzen"
+  },
+  "home": {
+    "welcome": "Herzlich willkommen",
+    "config": "Generelle Einstellungen",
+    "networking": "Netzwerkeinstellungen",
+    "ap": "Access Point",
+    "wlan": "WLAN",
+    "sensors": "Sensoren",
+    "test": "Sensoren Testen",
+    "ds1820": "Temperatur (DS1820)",
+    "hx711": "Waage (HX711)",
+    "bm280": "Luftfeuchtigkeit (BME280)",
+    "telemetry": "Telemetrie",
+    "beep": "BEEP",
+    "system": "System",
+    "restart": "Neu starten",
+    "log": "Log"
+  },
+  "general_config":{
+    "title": "Generelle Einstellungen",
+    "current_time": "Aktuelle Zeit einstellen",
+    "set_time": "Zeit einstellen",
+    "extraButton": "Extra-Button verfügbar",
+    "pin_data": "Data Pin (DOUT/DT)",
+    "select_language": "Sprache auswählen"
+  },
+  "beep": {
+    "title": "BEEP",
+    "server": "Server",
+    "sensor_key": "Sensor Key"
+  }
+}

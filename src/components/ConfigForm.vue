@@ -4,7 +4,7 @@
         <p class="submit"
            v-if="buttons_visible">
             <button @click="save_config()">{{ save_button_text }}</button>
-            <button @click="load_config()">Reset</button>
+            <button @click="load_config()">{{ $t('general.reset') }}</button>
         </p>
     </div>
 </template>
@@ -39,20 +39,20 @@ export default {
                 this.config_url
             ].join('')).then(response => {
                 this.$emit('change', response.data);
-                this.save_button_text = 'Save configuration';
+                this.save_button_text = this.$t('general.save_config');
             }).catch(e => {
                 console.error(e);
             })
         },
 
         save_config() {
-            this.save_button_text = 'saving...';
+            this.save_button_text = this.$t('general.saving');
             axios.post([
                 process.env.VUE_APP_FIPY_URL,
                 this.config_url
             ].join(''), this.config).then(response => {
                 if (response.status == 200) {
-                    this.save_button_text = 'saved';
+                    this.save_button_text = this.$t('general.saved');
                 }
             }).catch(e => {
                 console.error(e);
@@ -67,7 +67,7 @@ export default {
     watch: {
         config: {
             handler() {
-                this.save_button_text = 'Save configuration';
+                this.save_button_text = this.$t('general.save_config');
             },
             deep: true
         }

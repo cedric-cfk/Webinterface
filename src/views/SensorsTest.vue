@@ -1,19 +1,19 @@
 <template>
     <div>
-        <h1>Test sensors</h1>
-        Temperatures (DS18B20)
+        <h1>{{ $t('test.title') }}</h1>
+        {{ $t('test.temperatures') }}
         <ul id="temperatures">
   <li v-for="item, key, index in temperatures">
     {{ index+1 }} - {{ item }}
   </li>
 </ul>
-Humidity-Related Measurements
+{{ $t('test.humidity') }}
         <ul id="humidities">
   <li v-for="item, key, index in humidities">
      {{ index+1 }} - {{ item }} - {{ key }}
   </li>
 </ul>
-Weight
+{{ $t('test.weight') }}
         <ul id="Weight">
   <li v-for="item in weight">
       {{ item }}

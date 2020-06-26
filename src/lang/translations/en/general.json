@@ -1,0 +1,40 @@
+{
+  "general":{
+    "home": "Home",
+    "enabled": "Enabled",
+    "save_config": "Save configuration",
+    "saving": "saving...",
+    "saved": "saved",
+    "reset": "reset"
+  },
+  "home": {
+    "welcome": "Welcome",
+    "config": "General settings",
+    "networking": "Networking",
+    "ap": "Access Point",
+    "wlan": "WLan",
+    "sensors": "Sensors",
+    "test": "Test Sensors",
+    "ds1820": "Temperature (DS1820)",
+    "hx711": "Scale (HX711)",
+    "bm280": "Humidity (BME280)",
+    "telemetry": "Telemetry",
+    "beep": "Beep",
+    "system": "System",
+    "restart": "Restart",
+    "log": "Log"
+  },
+  "general_config":{
+    "title": "General settings",
+    "current_time": "Set current time",
+    "set_time": "Set Time",
+    "extraButton": "Extra Button available",
+    "pin_data": "Data Pin (DOUT/DT)",
+    "select_language": "Select language"
+  },
+  "beep": {
+    "title": "Beep",
+    "server": "Server",
+    "sensor_key": "Sensor Key"
+  }
+}

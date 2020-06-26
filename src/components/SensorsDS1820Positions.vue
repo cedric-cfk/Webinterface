@@ -1,6 +1,6 @@
 <template>
     <fieldset class="ds1820-positions">
-        <legend>Positions:</legend>
+        <legend>{{ $t('ds1820.positions') }}:</legend>
         <div v-for="(position, idx) in allowed_positions" :key="position">
             <button class="round"
                     :name="position"
@@ -31,7 +31,7 @@ export default {
                 alternative = idx + 1;
             }
             return (label) ? label : alternative;
-        } 
+        }
     },
     data() {
         return {

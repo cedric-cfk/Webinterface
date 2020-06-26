@@ -1,0 +1,24 @@
+{
+  "networking_general":{
+    "ssid": "SSID",
+    "encryption": "Verschlüsselung",
+    "password": "Passwort"
+  },
+  "ap":{
+    "title": "Access point Konfiguration",
+    "none": "Keine",
+    "channel": "Kanal"
+  },
+  "wlan":{
+    "title": "WLAN Konfiguration",
+    "antenna_external": "Use external antenna",
+    "antenna_pin": "Antenna Pin",
+    "ssid_select": "Please select an SSID",
+    "ssid_not_listed": "Meine SSID ist nicht aufgelistet",
+    "ip_address": "IP Adresse",
+    "address": "Adresse",
+    "subnet": "Subnetz",
+    "gateway": "Gateway",
+    "dns": "DNS Server"
+  }
+}

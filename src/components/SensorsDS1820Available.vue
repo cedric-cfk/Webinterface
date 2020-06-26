@@ -1,6 +1,6 @@
 <template>
     <fieldset class="ds1820-positions">
-        <legend>Unassigned sensors:</legend>
+        <legend>{{ $t('ds1820.available') }}:</legend>
         <div v-for="sensor in unassigned_ds1820" :key="sensor">
             <button class="round"
                     :name="sensor"

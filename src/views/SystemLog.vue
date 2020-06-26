@@ -1,10 +1,13 @@
 <template>
+  <div>
+    <h1>{{ $t('log.title') }}</h1>
+
     <ConfigForm v-model="log"
                 config_url="/api/log"
                 :buttons_visible=false>
         <p>
             <label for="reset_cause">
-                Reset cause:
+                {{ $t('log.reset_cause') }}
             </label>
             <input type="text"
                    name="reset_cause"
@@ -18,6 +21,7 @@
                       rows="10"></textarea>
         </p>
     </ConfigForm>
+  </div>
 </template>
 
 <script>
