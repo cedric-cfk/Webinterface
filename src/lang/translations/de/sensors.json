@@ -1,6 +1,6 @@
 {
   "test":{
-    "title": "Test sensors",
+    "title": "Sensoren testen",
     "temperatures": "Temperatur (DS18B20)",
     "humidity": "Luftfeuchtigkeit",
     "weight": "Gewicht"
@@ -19,8 +19,8 @@
   },
   "hx711_config":{
     "title": "Konfiguration des HX711",
-    "pin_data": "Daten Pin (DOUT/DT)",
-    "pin_clock": "Uhr Pin (CLK/SCK)",
+    "pin_data": "Pin für Button (DOUT/DT)",
+    "pin_clock": "Clock-Pin (CLK/SCK)",
     "start_calibration": "Kalibrierung starten"
   },
   "hx711_calibration":{
@@ -33,7 +33,7 @@
   },
   "bme280":{
     "title": "Konfiguration des BME280",
-    "pin_sda": "Pin SDA",
-    "pin_scl": "Pin SCL"
+    "pin_sda": "SDA-Pin",
+    "pin_scl": "SCL-Pin"
   }
 }

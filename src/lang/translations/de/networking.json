@@ -5,17 +5,17 @@
     "password": "Passwort"
   },
   "ap":{
-    "title": "Access point Konfiguration",
+    "title": "Konfiguration Access-Point",
     "none": "Keine",
     "channel": "Kanal"
   },
   "wlan":{
     "title": "WLAN Konfiguration",
-    "antenna_external": "Use external antenna",
-    "antenna_pin": "Antenna Pin",
-    "ssid_select": "Please select an SSID",
+    "antenna_external": "Benutze externe Antenne",
+    "antenna_pin": "Pin für Antenne",
+    "ssid_select": "Wähle einen SSID aus",
     "ssid_not_listed": "Meine SSID ist nicht aufgelistet",
-    "ip_address": "IP Adresse",
+    "ip_address": "IP-Adresse",
     "address": "Adresse",
     "subnet": "Subnetz",
     "gateway": "Gateway",

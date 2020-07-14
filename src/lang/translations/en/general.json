@@ -28,8 +28,8 @@
     "title": "General settings",
     "current_time": "Set current time",
     "set_time": "Set Time",
-    "extraButton": "Extra Button available",
-    "pin_data": "Data Pin (DOUT/DT)",
+    "extraButton": "Configuration button available",
+    "pin_data": "Button pin (DOUT/DT)",
     "select_language": "Select language"
   },
   "beep": {

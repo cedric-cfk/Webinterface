@@ -2,7 +2,7 @@
   "general":{
     "home": "Start",
     "enabled": "Aktiviert",
-    "save_config": "Speicher Einstellungen",
+    "save_config": "Einstellungen speichern",
     "saving": "wird Gespeichert...",
     "saved": "Gespeichert",
     "reset": "Zurücksetzen"
@@ -14,7 +14,7 @@
     "ap": "Access Point",
     "wlan": "WLAN",
     "sensors": "Sensoren",
-    "test": "Sensoren Testen",
+    "test": "Sensoren testen",
     "ds1820": "Temperatur (DS1820)",
     "hx711": "Waage (HX711)",
     "bm280": "Luftfeuchtigkeit (BME280)",
@@ -28,13 +28,13 @@
     "title": "Generelle Einstellungen",
     "current_time": "Aktuelle Zeit einstellen",
     "set_time": "Zeit einstellen",
-    "extraButton": "Extra-Button verfügbar",
-    "pin_data": "Data Pin (DOUT/DT)",
+    "extraButton": "Konfigurations-Button verfügbar",
+    "pin_data": "Pin für Button (DOUT/DT)",
     "select_language": "Sprache auswählen"
   },
   "beep": {
     "title": "BEEP",
     "server": "Server",
-    "sensor_key": "Sensor Key"
+    "sensor_key": "Sensor-Key"
   }
 }

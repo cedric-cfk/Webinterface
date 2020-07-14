@@ -18,8 +18,8 @@
   },
   "hx711_config":{
     "title": "Configure HX711",
-    "pin_data": "Data Pin (DOUT/DT)",
-    "pin_clock": "Clock Pin (CLK/SCK)",
+    "pin_data": "Button pin (DOUT/DT)",
+    "pin_clock": "Clock pin (CLK/SCK)",
     "start_calibration": "Start calibration"
   },
   "hx711_calibration":{

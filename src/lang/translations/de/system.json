@@ -5,6 +5,6 @@
   },
   "log":{
     "title": "Log",
-    "reset_cause": "reset cause"
+    "reset_cause": "Zurücksetzungs Ursache"
   }
 }
