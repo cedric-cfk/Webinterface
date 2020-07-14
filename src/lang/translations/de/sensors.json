@@ -1,0 +1,39 @@
+{
+  "test":{
+    "title": "Test sensors",
+    "temperatures": "Temperatur (DS18B20)",
+    "humidity": "Luftfeuchtigkeit",
+    "weight": "Gewicht"
+  },
+  "ds1820":{
+    "test": "sads",
+    "title": "Konfiguration des DS1820",
+    "pin_select": "Pin auswählen",
+    "paragraph": "Bitte ordne jedem Temperatursensor eine Position zu.<br>Untenstehend siehst du zwei Sätze von Kreisen. Die roten bzw. grünen Kreise repräsentieren die hinterlegten Positionen deiner Sensoren am Kabel, die grauen Kreise darunter sind die verbundenen DS1820, also die technischen Temperatursensoren.<br>Führe die folgenden Schritte für jeden Sensor durch:",
+    "1_list": "Umfasse den metallenen Teil eines Sensors. Klicke den grauen Kreis mit der steigenden Temperatur an.",
+    "2_list": "Klicke den roten Kreis an, der die Position des zurzeit umfassten Sensors repräsentiert.",
+    "3_list": "Der zuletzt angeklickte Kreis sollte sich nun grün färben und die Temperatur anzeigen. Nachdem du einen Sensor zugeordnet hast, verschwindet er außerdem aus dem grauen Satz der noch nicht zugeordneten Kreise.",
+    "tip": "Tipp: Durch erneutes Anklicken eines bereits zugeordneten Sensors kann die Zuordnung rückgängig gemacht werden.",
+    "positions": "Positionen",
+    "available": "Nicht zugeordnet Sensoren"
+  },
+  "hx711_config":{
+    "title": "Konfiguration des HX711",
+    "pin_data": "Daten Pin (DOUT/DT)",
+    "pin_clock": "Uhr Pin (CLK/SCK)",
+    "start_calibration": "Kalibrierung starten"
+  },
+  "hx711_calibration":{
+    "title": "Kalibrierung der Waage",
+    "1_text": "Zum Kalibrieren lege nun bitte Gewichte auf die Waage. Dafür eignen sich beispielsweise Milch-, oder Saftkartons. Nachdem du die Gewichte gewogen hast, nimm im nächsten Schritt alle wieder herunter. Wenn du möchtest, kannst du dies mit unterschiedlichen Gewichten wiederholen. Wenn das Gewicht auf der Waage liegt, klicke bitte auf \"Weiter\".",
+    "weight": "Gewicht (kg)",
+    "continue": "Weiter",
+    "back": "Zurück",
+    "2_text": "Nun nimm bitte die Gewichte wieder von der Waage herunter. Wenn du möchtest, kannst du noch andere Gewichte bestimmen. Wenn du das Gewicht heruntergenommen hast, klicke auf \"Weiter\"."
+  },
+  "bme280":{
+    "title": "Konfiguration des BME280",
+    "pin_sda": "Pin SDA",
+    "pin_scl": "Pin SCL"
+  }
+}

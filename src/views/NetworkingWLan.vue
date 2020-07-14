@@ -1,34 +1,34 @@
 <template>
     <div>
-        <h1>WLan configuration</h1>
+        <h1>{{ $t('wlan.title') }}</h1>
 
         <ConfigForm v-model="wlan_config"
                     config_url="/api/config/networking/wlan">
             <p>
-                <label for="enabled">Enabled:</label>
+                <label for="enabled">{{ $t('general.enabled') }}:</label>
                 <input type="checkbox"
                     name="enabled"
                     v-model="wlan_config.enabled">
             </p>
             <p>
-                <label for="antenna_external">Use external antenna:</label>
+                <label for="antenna_external">{{ $t('wlan.antenna_external') }}:</label>
                 <input type="checkbox"
                     name="antenna_external"
                     v-model="wlan_config.antenna_external">
             </p>
             <p>
-                <label for="pin_dout">Antenna Pin:</label>
+                <label for="pin_dout">{{ $t('wlan.antenna_pin') }}:</label>
                 <ConfigPinSelect name="pin_dout"
                                  v-model="wlan_config.antenna_pin" />
             </p>
             <p v-if="ssid_visible">
-                <label for="ssid">SSID:</label>
+                <label for="ssid">{{ $t('networking_general.ssid') }}:</label>
                 <select name="ssid"
                         v-model="wlan_config.ssid"
                         @change="update_encryption()">
                     <option disabled
                             value="">
-                        Please select an SSID
+                        {{ $t('wlan.ssid_select') }}
                     </option>
                     <option v-for="ap in wlan_config.available"
                             :value="ap.ssid"
@@ -40,16 +40,16 @@
             <p v-if="ssid_visible" id="ssid_not_listed">
                 <label for="ssid_visible">
                 </label>
-                <button @click="ssid_visible = false">My SSID is not listed</button>
+                <button @click="ssid_visible = false">{{ $t('wlan.ssid_not_listed') }}</button>
             </p>
             <p v-else>
-                <label for="ssid">SSID:</label>
+                <label for="ssid">{{ $t('wlan.ssid') }}:</label>
                 <input type="text"
                        name="ssid"
                        v-model="wlan_config.ssid">
             </p>
             <p>
-                <label for="encryption">Encryption:</label>
+                <label for="encryption">{{ $t('networking_general.encryption') }}:</label>
                 <select name="encryption"
                         v-model="wlan_config.encryption">
                     <option value="">None</option>
@@ -60,13 +60,13 @@
                 </select>
             </p>
             <p>
-                <label for="password">Password:</label>
+                <label for="password">{{ $t('networking_general.password') }}:</label>
                 <input type="password"
                        name="password"
                        v-model="wlan_config.password">
             </p>
             <p>
-                <label for="ifconfig">IP Address:</label>
+                <label for="ifconfig">{{ $t('wlan.ip_address') }}:</label>
                 <span>
                     <input type="radio"
                         name="ifconfig"
@@ -81,25 +81,25 @@
             <div id="ipv4_static"
                 v-if="wlan_config.ifconfig === 'static'">
                 <p>
-                    <label for="ipaddress">Address:</label>
+                    <label for="ipaddress">{{ $t('wlan.address') }}:</label>
                     <input type="text"
                            name="ipaddress"
                            v-model="wlan_config.ipaddress">
                 </p>
                 <p>
-                    <label for="subnet">Subnet:</label>
+                    <label for="subnet">{{ $t('wlan.subnet') }}:</label>
                     <input type="text"
                            name="subnet"
                            v-model="wlan_config.subnet">
                 </p>
                 <p>
-                    <label for="gateway">Gateway:</label>
+                    <label for="gateway">{{ $t('wlan.gateway') }}:</label>
                     <input type="text"
                            name="gateway"
                            v-model="wlan_config.gateway">
                 </p>
                 <p>
-                    <label for="dns">DNS Server:</label>
+                    <label for="dns">{{ $t('wlan.dns') }}:</label>
                     <input type="text"
                            name="dns"
                            v-model="wlan_config.dns">

@@ -1,28 +1,32 @@
 <template>
+  <div>
+    <h1>{{ $t('hx711_config.title') }}</h1>
+
     <ConfigForm v-model="hx711_config"
                 config_url="/api/config/sensors/hx711">
         <p>
-            <label for="enabled">Enabled:</label>
+            <label for="enabled">{{ $t('general.enabled') }}:</label>
             <input type="checkbox"
                    name="enabled"
                    v-model="hx711_config.enabled">
         </p>
         <p>
-            <label for="pin_dout">Data Pin (DOUT/DT):</label>
+            <label for="pin_dout">{{ $t('hx711_config.pin_data') }}:</label>
             <ConfigPinSelect name="pin_dout"
                              v-model="hx711_config.pin_dout" />
         </p>
         <p>
-            <label for="pin_dout">Clock Pin (CLK/SCK):</label>
+            <label for="pin_dout">{{ $t('hx711_config.pin_clock') }}:</label>
             <ConfigPinSelect name="pin_dout"
                              v-model="hx711_config.pin_pdsck" />
         </p>
         <p>
-            <button @click="$router.push('/sensors/hx711/calibrate')">
-                Start calibration
+            <button @click="$router.push('/' + $i18n.locale + '/sensors/hx711/calibrate')">
+                {{ $t('hx711_config.start_calibration') }}
             </button>
         </p>
     </ConfigForm>
+  </div>
 </template>
 
 <script>

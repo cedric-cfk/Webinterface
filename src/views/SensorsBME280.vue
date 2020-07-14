@@ -1,23 +1,27 @@
 <template>
+  <div>
+    <h1>{{ $t('bme280.title') }}</h1>
+
     <ConfigForm v-model="bme280_config"
                 config_url="/api/config/sensors/bme280">
         <p>
-            <label for="enabled">Enabled:</label>
+            <label for="enabled">{{ $t('general.enabled') }}:</label>
             <input type="checkbox"
                    name="enabled"
                    v-model="bme280_config.enabled">
         </p>
         <p>
-            <label for="pin_dout">Pin SDA:</label>
+            <label for="pin_dout">{{ $t('bme280.pin_sda') }}:</label>
             <ConfigPinSelect name="pin_dout"
                              v-model="bme280_config.pin_sda" />
         </p>
         <p>
-            <label for="pin_dout">Pin SCL:</label>
+            <label for="pin_dout">{{ $t('bme280.pin_scl') }}:</label>
             <ConfigPinSelect name="pin_dout"
                              v-model="bme280_config.pin_scl" />
         </p>
     </ConfigForm>
+  </div>
 </template>
 
 <script>
