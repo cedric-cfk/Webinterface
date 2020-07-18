@@ -29,7 +29,7 @@
     "current_time": "Set current time",
     "set_time": "Set Time",
     "extraButton": "Configuration button available",
-    "pin_data": "Button pin (DOUT/DT)",
+    "pin_data": "Button pin",
     "select_language": "Select language"
   },
   "beep": {

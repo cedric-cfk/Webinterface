@@ -29,7 +29,7 @@
     "current_time": "Aktuelle Zeit einstellen",
     "set_time": "Zeit einstellen",
     "extraButton": "Konfigurations-Button verfügbar",
-    "pin_data": "Pin für Button (DOUT/DT)",
+    "pin_data": "Button-Pin",
     "select_language": "Sprache auswählen"
   },
   "beep": {
