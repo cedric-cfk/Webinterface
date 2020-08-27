@@ -12,7 +12,7 @@
     "config": "Generelle Einstellungen",
     "networking": "Netzwerkeinstellungen",
     "ap": "Access Point",
-    "wlan": "WLAN",
+    "network_config": "Netzzugang Einstellen",
     "sensors": "Sensoren",
     "test": "Sensoren testen",
     "ds1820": "Temperatur (DS1820)",

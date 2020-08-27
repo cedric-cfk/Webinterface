@@ -16,8 +16,8 @@
                 </router-link>
             </li>
             <li>
-                <router-link :to="'/' + $i18n.locale + '/networking/wlan'">
-                    {{ $t('home.wlan') }}
+                <router-link :to="'/' + $i18n.locale + '/networking/config'">
+                    {{ $t('home.network_config') }}
                 </router-link>
             </li>
         </ul>

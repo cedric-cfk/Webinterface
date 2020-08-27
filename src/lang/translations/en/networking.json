@@ -9,8 +9,12 @@
     "none": "None",
     "channel": "Channel"
   },
+  "network_config":{
+    "title": "Network configuration",
+    "enable": "Enable network access",
+    "network_select": "Select network type"
+  },
   "wlan":{
-    "title": "WLan configuration",
     "antenna_external": "Use external antenna",
     "antenna_pin": "Antenna Pin",
     "ssid_select": "Please select an SSIP",
@@ -20,5 +24,11 @@
     "subnet": "Subnet",
     "gateway": "Gateway",
     "dns": "DNS Server"
+  },
+  "lte":{
+    "apn": "apn",
+    "band": "band",
+    "warning": "Please ensure, to have the right modem firmware, the sim card inserted, the antenna connected to the right port on the FiPy and removed the jumpers RTS and CTS from the Expansionboard, before using any LTE network.",
+    "info": "For more informations please visit the hiveeyes forum under the topic 'FiPy mit LTE CAT M1 nutzen'"
   }
 }

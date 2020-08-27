@@ -12,7 +12,7 @@ import SensorsTest from './views/SensorsTest'
 
 import TelemetryBEEP from './views/TelemetryBEEP'
 
-import NetworkingWLan from './views/NetworkingWLan'
+import Networking from './views/Networking'
 import NetworkingAccessPoint from './views/NetworkingAccessPoint'
 
 import Restart from './views/Restart'
@@ -79,9 +79,9 @@ export default new Router({
             component: SensorsBME280
         },
         {
-            path: 'networking/wlan',
+            path: 'networking/config',
             name: 'wlan',
-            component: NetworkingWLan
+            component: Networking
         },
         {
             path: 'networking/ap',
