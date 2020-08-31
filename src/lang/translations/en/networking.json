@@ -17,7 +17,7 @@
   "wlan":{
     "antenna_external": "Use external antenna",
     "antenna_pin": "Antenna Pin",
-    "ssid_select": "Please select an SSIP",
+    "ssid_select": "Please select an SSID",
     "ssid_not_listed": "My SSID is not listed",
     "ip_address": "IP Address",
     "address": "Address",
