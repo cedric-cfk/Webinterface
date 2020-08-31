@@ -16,8 +16,8 @@
               <select name="using"
                       v-model="general.using">
                   <option value="wlan">WLan</option>
-                  <option value="lte_M1">lte_M1</option>
-                  <option value="lte_NB1">lte_NB1</option>
+                  <option value="lte_M1">LTE_M1</option>
+                  <option value="lte_NB1">LTE_NB1</option>
               </select>
           </p>
           <div v-if="general.using === 'lte_M1' || general.using === 'lte_NB1'" class="lte_warning_text">
