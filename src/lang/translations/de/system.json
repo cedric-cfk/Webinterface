@@ -1,7 +1,7 @@
 {
   "restart":{
     "title": "Neustart",
-    "paragraph": "Der FiPy startet sich nun neu. Wenn du eine WLAN-Verbindung eingerichtet hast, wird das System versuchen, sich mit dieser zu verbinden. Wenn alles in Ordnung ist, fängt die LED an, grün zu leuchten und du solltest eingehende Daten in BEEP sehen können.<br>Falls die Verbindung scheitert, leuchtet die LED gelb und du kannst dich erneut mit diesem Zugangspunkt verbinden.<br><b>Dieses Fenster kann nun geschlossen werden!</b>"
+    "paragraph": "Der FiPy startet sich nun neu. Wenn du eine WLAN- oder LTE-Verbindung eingerichtet hast, wird das System versuchen, sich mit dieser zu verbinden. Wenn alles in Ordnung ist, fängt die LED an, grün zu leuchten und du solltest eingehende Daten in BEEP sehen können.<br>Falls die Verbindung scheitert, leuchtet die LED gelb und du kannst dich erneut mit diesem Zugangspunkt verbinden.<br><b>Dieses Fenster kann nun geschlossen werden!</b>"
   },
   "log":{
     "title": "Log",
