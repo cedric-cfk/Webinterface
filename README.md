@@ -25,10 +25,11 @@ VUE_APP_FIPY_URL= http://192.168.1.102
 * If you use hiverize/FiPy: Open the hiverize/FiPy project and open the `main.py` file. Now comment following lines in the `enable_ap()` function:
 ```
 # getattr(_wm, 'enable_ap')()
-# log("AP enabled")
 ```
 upload the updated Project to your FiPy.
 This is needed because we have to start the webserver, but if the FiPy is in ap-mode we cannot connect.
+
+> **Note**: After changing this line, you need to have a wlan enabled and configuered in the settings. Or else you will get a `OSError: Network card not available` Error.
 
 * Open your Command Line and execute the following commands
 
